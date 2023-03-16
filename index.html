@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objects Carousel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <main id="app">
+        <div id="Carousel">
+            
+            <div id="Img-container">
+                <div id="arrow-up" @click="arrowup()">^</div>
+                <img id="actual-img" v-bind:src="slides[actualImageindex].image" :alt="slides[actualImageindex]">
+                <div id="Text-container">
+                    <div id="Img-title">
+                        <h2>{{slides[actualImageindex].title}}</h2>
+                    </div>
+                    <div id="Img-description">
+                        {{slides[actualImageindex].text}}
+                    </div>
+                </div>
+                <div id="arrow-down" @click="arrodown()">V</div>
+            </div>
+
+            <div id="Thumbnail">
+                    
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
